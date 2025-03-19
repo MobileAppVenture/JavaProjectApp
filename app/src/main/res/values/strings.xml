@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">MobileApp</string>
-    <string name="hello_user">Hello, User!</string>
+    <string name="hello_user">MobileAppVenture</string>
     <string name="buttonNext">Next</string>
-    <string name="ImgChoice">This is Next Activity</string>
+    <string name="TitleSelectImage">Select an image</string>
+    <string name="SelectInFiles">Open a gallery</string>
+    <string name="UseCamera">Use the camera</string>
+    <string name="ImageInstruction">Usage instructions</string>
+    <string name="TextInstruction1">Choose an image for recognition</string>
+    <string name="TextInstruction2">See the result</string>
+    <string name="TextInstruction3">Study your search history</string>
+    <string name="descriptionImage">Selected Image Full</string>
+
 </resources>

@@ -19,7 +19,51 @@
         android:text="@string/hello_user"
         android:textAlignment="center"
         android:textColor="@color/textColor"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        />
+
+
+    <TextView
+        android:id="@+id/testInstruction1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hiUser"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/angkor"
+        android:text="@string/TextInstruction1"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/testInstruction2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/testInstruction1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-8dp"
+        android:fontFamily="@font/angkor"
+        android:text="@string/TextInstruction2"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/testInstruction3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/testInstruction2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-3dp"
+        android:fontFamily="@font/angkor"
+        android:text="@string/TextInstruction3"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/nextButton"

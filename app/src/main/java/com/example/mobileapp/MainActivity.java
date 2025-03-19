@@ -12,14 +12,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        nextButton = findViewById(R.id.nextButton);
+        Button nextButton = findViewById(R.id.nextButton);
         nextButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, NextActivity.class);
             startActivity(intent);
