@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#F4D621"
     tools:context=".MainActivity">
 
     <TextView
@@ -67,14 +67,13 @@
 
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="130sp"
-        android:text="@string/buttonNext"
-        android:textSize="20sp"
+        android:layout_marginBottom="101dp"
         android:fontFamily="@font/angkor"
-        android:layout_marginBottom="50sp"/>
+        android:text="@string/buttonNext"
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -10,5 +10,8 @@
     <string name="TextInstruction2">See the result</string>
     <string name="TextInstruction3">Study your search history</string>
     <string name="descriptionImage">Selected Image Full</string>
+    <string name="DefoltImage">Image to process:</string>
+    <string name="buttonReturn">Return</string>
+    <string name="ResultImage">Result:</string>
 
 </resources>
