@@ -21,13 +21,13 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/angkor"
-        android:text="@string/DefoltImage"
+        android:text="@string/ResultImage"
         android:textColor="#762AB0"
         android:textSize="40sp"
         android:gravity="center" />
 
     <ImageView
-        android:id="@+id/instruction2"
+        android:id="@+id/instructionNew"
         android:layout_width="400dp"
         android:layout_height="480dp"
         android:layout_marginTop="75dp"
@@ -45,14 +45,14 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/nextButton3"
+            android:id="@+id/returnButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:fontFamily="@font/angkor"
             android:text="@string/buttonReturn"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginHorizontal="16dp"/>
 
         <Button
             android:id="@+id/nextButton4"
