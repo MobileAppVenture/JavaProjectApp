@@ -29,8 +29,8 @@ public class ViewImage extends AppCompatActivity {
         setContentView(R.layout.activity_view_image);
 
         imageView = findViewById(R.id.instruction2);
-        Button nextButton = findViewById(R.id.nextButton4);
-        Button returnButton = findViewById(R.id.nextButton3);
+        Button startButton = findViewById(R.id.startButton);
+        Button returnButton = findViewById(R.id.returnButton);
 
         String imageUriString = getIntent().getStringExtra("imageUri");
         if (imageUriString != null) {
@@ -38,10 +38,14 @@ public class ViewImage extends AppCompatActivity {
             displayImage(imageUri);
         } else {
             Log.e("ViewImage", "imageUri is null");
-            Toast.makeText(this, "Ошибка: изображение не найдено", Toast.LENGTH_SHORT).show();
+            Toast.makeText(
+                    this,
+                    "Error: image not found",
+                    Toast.LENGTH_SHORT
+            ).show();
         }
 
-        nextButton.setOnClickListener(v -> {
+        startButton.setOnClickListener(v -> {
             Intent intent = new Intent(ViewImage.this, AnalysisActivity.class);
             if (imageUri != null) {
                 intent.putExtra("imageUri", imageUri.toString());
@@ -49,8 +53,6 @@ public class ViewImage extends AppCompatActivity {
             startActivity(intent);
         });
         returnButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ViewImage.this, NextActivity.class);
-            startActivity(intent);
             finish();
         });
 
@@ -67,14 +69,18 @@ public class ViewImage extends AppCompatActivity {
                 inputStream.close();
             }
         } catch (IOException e) {
-            Log.e("ViewImage", "Ошибка загрузки изображения", e);
-            Toast.makeText(this, "Не удалось загрузить изображение", Toast.LENGTH_SHORT).show();
+            Log.e("ViewImage", "Image upload error", e);
+            Toast.makeText(
+                    this,
+                    "Couldn't upload image",
+                    Toast.LENGTH_SHORT
+            ).show();
         }
     }
 
     private void processImage() {
         // Здесь можно добавить обработку изображения
-        Toast.makeText(this, "Обработка изображения...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Image Processing...", Toast.LENGTH_SHORT).show();
 
 
     }

@@ -19,14 +19,30 @@ public class AnalysisActivity extends AppCompatActivity {
         setContentView(R.layout.activity_analysis);
 
         ImageView imageView = findViewById(R.id.instructionNew);
+        Button historyButton = findViewById(R.id.nextButton4);
+        Button returnButton = findViewById(R.id.returnButton);
 
         String imageUriString = getIntent().getStringExtra("imageUri");
         if (imageUriString != null) {
             Uri imageUri = Uri.parse(imageUriString);
             imageView.setImageURI(imageUri);
         } else {
-            Toast.makeText(this, "Ошибка: изображение не передано", Toast.LENGTH_SHORT).show();
+            Toast.makeText(
+                    this,
+                    "Ошибка: изображение не передано",
+                    Toast.LENGTH_SHORT
+            ).show();
         }
+        historyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    AnalysisActivity.this,
+                    HistoryActivity.class
+            );
+            startActivity(intent);
+        });
+        returnButton.setOnClickListener(v -> {
+            finish();
+        });
 
     }
 }

@@ -17,52 +17,52 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/angkor"
+        android:gravity="center"
         android:text="@string/ResultImage"
         android:textColor="#762AB0"
-        android:textSize="40sp"
-        android:gravity="center" />
+        android:textSize="40sp" />
 
     <ImageView
         android:id="@+id/instructionNew"
         android:layout_width="400dp"
         android:layout_height="480dp"
+        android:layout_centerInParent="true"
         android:layout_marginTop="75dp"
         android:layout_marginBottom="74dp"
-        android:contentDescription="@string/ImageInstruction"
-        android:layout_centerInParent="true"/>
+        android:contentDescription="@string/ImageInstruction" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="2">
 
         <Button
             android:id="@+id/returnButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:fontFamily="@font/angkor"
             android:text="@string/buttonReturn"
-            android:textSize="20sp"
-            android:layout_marginHorizontal="16dp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/nextButton4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:fontFamily="@font/angkor"
-            android:text="@string/buttonNext"
-            android:textSize="20sp"
-            android:layout_marginHorizontal="16dp"/>
+            android:text="@string/HistoryTitle"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

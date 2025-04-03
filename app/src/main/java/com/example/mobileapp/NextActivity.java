@@ -11,6 +11,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,28 +51,46 @@ public class NextActivity extends AppCompatActivity {
 
         photoButton.setOnClickListener(v -> {
             Log.d("NextActivity", "Photo button clicked");
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(
+                        this, new String[]{Manifest.permission.CAMERA},
+                        CAMERA_PERMISSION_CODE);
             } else {
                 openCamera();
             }
         });
 
         nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(NextActivity.this, ViewImage.class);
-            if (selectedImageUri != null) {
-                intent.putExtra("imageUri", selectedImageUri.toString());
-            } else if (photoUri != null) {
-                intent.putExtra("imageUri", photoUri.toString());
+            if (selectedImageUri == null && photoUri == null) {
+                Log.d("NextActivity", "No image selected");
+                Toast.makeText(
+                        NextActivity.this,
+                        "Error: Photo not selected",
+                        Toast.LENGTH_SHORT
+                ).show();
+            } else {
+                Intent intent = new Intent(NextActivity.this, ViewImage.class);
+                if (selectedImageUri != null) {
+                    intent.putExtra("imageUri", selectedImageUri.toString());
+                } else if (photoUri != null) {
+                    intent.putExtra("imageUri", photoUri.toString());
+                }
+                startActivity(intent);
             }
-            startActivity(intent);
         });
     }
 
     private void openCamera() {
         try {
             File photoFile = createImageFile();
-            photoUri = FileProvider.getUriForFile(this, "com.example.mobileapp.fileprovider", photoFile);
+            photoUri = FileProvider.getUriForFile(
+                    this,
+                    "com.example.mobileapp.fileprovider",
+                    photoFile
+            );
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
             startActivityForResult(takePictureIntent, CAMERA_REQUEST_CODE);
@@ -87,7 +106,10 @@ public class NextActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(
+            int requestCode, @NonNull String[] permissions,
+            @NonNull int[] grantResults
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAMERA_PERMISSION_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {

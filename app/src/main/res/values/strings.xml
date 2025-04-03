@@ -13,5 +13,8 @@
     <string name="DefoltImage">Image to process:</string>
     <string name="buttonReturn">Return</string>
     <string name="ResultImage">Result:</string>
+    <string name="HistoryTitle">History</string>
+    <string name="BackToSelect">Again</string>
+    <string name="Start">Start</string>
 
 </resources>
