@@ -77,11 +77,4 @@ public class ViewImage extends AppCompatActivity {
             ).show();
         }
     }
-
-    private void processImage() {
-        // Здесь можно добавить обработку изображения
-        Toast.makeText(this, "Image Processing...", Toast.LENGTH_SHORT).show();
-
-
-    }
 }
