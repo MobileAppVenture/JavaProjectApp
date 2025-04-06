@@ -13,9 +13,13 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
 
         Button again = findViewById(R.id.again);
+        Button returnButton = findViewById(R.id.returnButton);
         again.setOnClickListener(v -> {
             Intent intent = new Intent(HistoryActivity.this, NextActivity.class);
             startActivity(intent);
+        });
+        returnButton.setOnClickListener(v -> {
+            finish();
         });
 
     }
