@@ -51,7 +51,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:fontFamily="@font/angkor"
-            android:text="@string/buttonReturn"
+            android:text="@string/buttonReturn1"
             android:textSize="20sp" />
 
         <Button
