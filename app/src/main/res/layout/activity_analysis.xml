@@ -46,7 +46,7 @@
         android:fontFamily="@font/angkor"
         android:gravity="center"
         android:textColor="#762AB0"
-        android:textSize="16sp" />
+        android:textSize="26sp" />
 
 
     <LinearLayout
