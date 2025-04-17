@@ -76,6 +76,9 @@ public class AnalysisActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        returnButton.setOnClickListener(v -> finish());
+        returnButton.setOnClickListener(v -> {
+            Intent intent = new Intent(AnalysisActivity.this, NextActivity.class);
+            startActivity(intent);
+        });
     }
 }
