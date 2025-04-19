@@ -4,15 +4,6 @@
     android:layout_height="match_parent"
     android:background="#F4D621">
 
-    <ImageView
-        android:id="@+id/fullScreenImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/descriptionImage"
-        android:gravity="center_horizontal"
-        android:scaleType="centerCrop" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -28,21 +19,22 @@
 
     <ImageView
         android:id="@+id/instructionNew"
-        android:layout_width="200dp"
-        android:layout_height="180dp"
+        android:layout_width="378dp"
+        android:layout_height="363dp"
+        android:layout_below="@id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginTop="133dp"
         android:contentDescription="@string/ImageInstruction" />
 
     <TextView
         android:id="@+id/resultText"
-        android:layout_width="380dp"
-        android:layout_height="250dp"
+        android:layout_width="325dp"
+        android:layout_height="81dp"
+        android:layout_below="@id/instructionNew"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="505dp"
         android:fontFamily="@font/angkor"
         android:gravity="center"
         android:textColor="#762AB0"
@@ -58,7 +50,7 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/returnButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,7 +60,7 @@
             android:text="@string/buttonReturn"
             android:textSize="20sp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nextButton4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

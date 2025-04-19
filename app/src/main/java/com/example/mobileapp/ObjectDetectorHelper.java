@@ -30,13 +30,13 @@ public class ObjectDetectorHelper {
             );
 
         } catch (IOException e) {
-            Log.e("ObjectDetectorHelper", "Ошибка при загрузке модели", e);
+            Log.e("ObjectDetectorHelper", "Error loading the model", e);
         }
     }
 
     public List<Detection> detect(Bitmap bitmap) {
         if (objectDetector == null) {
-            Log.e("ObjectDetectorHelper", "Модель не инициализирована");
+            Log.e("ObjectDetectorHelper", "The model has not been initialized");
             return null;
         }
 
