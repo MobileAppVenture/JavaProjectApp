@@ -2,20 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4D621">
+    android:background="@color/background_yellow">
 
     <TextView
         android:id="@+id/history"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/angkor"
-        android:gravity="center"
-        android:text="@string/HistoryTitle"
-        android:textColor="#762AB0"
-        android:textSize="40sp" />
+        style="@style/TitleText"
+        android:text="@string/HistoryTitle" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/historyRecyclerView"
@@ -41,23 +33,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/again"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/BackToSelect"
-            android:textSize="20sp" />
+            android:text="@string/BackToSelect" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/returnButton"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/buttonReturn"
-            android:textSize="20sp" />
+            android:text="@string/buttonReturn" />
 
     </LinearLayout>
 

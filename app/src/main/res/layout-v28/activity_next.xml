@@ -2,20 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4D621">
+    android:background="@color/background_yellow">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/angkor"
-        android:gravity="center"
-        android:text="@string/TitleSelectImage"
-        android:textColor="#762AB0"
-        android:textSize="40sp" />
+        style="@style/TitleText"
+        android:text="@string/TitleSelectImage" />
 
     <LinearLayout
         android:id="@+id/buttonContainer"
@@ -30,25 +22,16 @@
 
         <ImageButton
             android:id="@+id/gallery"
-            android:layout_width="115dp"
-            android:layout_height="108dp"
+            style="@style/AppImageButton"
             android:layout_marginEnd="60dp"
-            android:layout_weight="1"
-            android:background="@color/textColor"
-            android:clickable="false"
             android:contentDescription="@string/SelectInFiles"
-            android:scaleType="centerCrop"
             android:src="@android:drawable/ic_menu_gallery" />
 
         <ImageButton
             android:id="@+id/photo"
-            android:layout_width="115dp"
-            android:layout_height="108dp"
+            style="@style/AppImageButton"
             android:layout_marginStart="13dp"
-            android:layout_weight="1"
-            android:background="@color/textColor"
             android:contentDescription="@string/UseCamera"
-            android:scaleType="centerCrop"
             android:src="@android:drawable/ic_menu_camera" />
 
     </LinearLayout>
@@ -66,13 +49,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton2"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/angkor"
-        android:text="@string/buttonNext"
-        android:textSize="20sp" />
+        style="@style/AppMaterialButtonNext"
+        android:text="@string/buttonNext" />
 
 </RelativeLayout>

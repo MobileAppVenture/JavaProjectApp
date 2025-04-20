@@ -17,7 +17,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HistoryActivity extends AppCompatActivity implements HistoryAdapter.OnDeleteClickListener {
+public class HistoryActivity extends AppCompatActivity implements
+        HistoryAdapter.OnDeleteClickListener {
 
     private RecyclerView recyclerView;
     private HistoryAdapter adapter;
@@ -55,7 +56,8 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         Gson gson = new Gson();
 
         String json = prefs.getString("history_list", null);
-        Type type = new TypeToken<ArrayList<HistoryItem>>(){}.getType();
+        Type type = new TypeToken<ArrayList<HistoryItem>>() {
+        }.getType();
         ArrayList<HistoryItem> list = gson.fromJson(json, type);
         if (list == null) {
             list = new ArrayList<>();
@@ -64,7 +66,10 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
     }
 
     private void saveHistory() {
-        SharedPreferences prefs = getSharedPreferences("history_prefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences(
+                "history_prefs",
+                MODE_PRIVATE
+        );
         SharedPreferences.Editor editor = prefs.edit();
         Gson gson = new Gson();
         editor.putString("history_list", gson.toJson(historyList));
@@ -76,6 +81,10 @@ public class HistoryActivity extends AppCompatActivity implements HistoryAdapter
         historyList.remove(position);
         saveHistory();
         adapter.notifyItemRemoved(position);
-        Toast.makeText(this, "The element has been deleted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(
+                this,
+                "The element has been deleted",
+                Toast.LENGTH_SHORT
+        ).show();
     }
 }

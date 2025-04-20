@@ -1,77 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4D621"
+    android:background="@color/background_yellow"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/hiUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="50sp"
-        android:fontFamily="@font/angkor"
+        style="@style/TitleText"
         android:text="@string/hello_user"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
         android:textSize="35sp" />
 
     <TextView
         android:id="@+id/testInstruction1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InstructionText"
         android:layout_below="@id/hiUser"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="0dp"
-        android:fontFamily="@font/angkor"
-        android:text="@string/TextInstruction1"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="25sp" />
+        android:text="@string/TextInstruction1" />
 
     <TextView
         android:id="@+id/testInstruction2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InstructionText"
         android:layout_below="@id/testInstruction1"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="-8dp"
-        android:fontFamily="@font/angkor"
-        android:text="@string/TextInstruction2"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="25sp" />
+        android:text="@string/TextInstruction2" />
 
     <TextView
         android:id="@+id/testInstruction3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InstructionText"
         android:layout_below="@id/testInstruction2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="-3dp"
-        android:fontFamily="@font/angkor"
-        android:text="@string/TextInstruction3"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="25sp" />
+        android:text="@string/TextInstruction3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/angkor"
-        android:text="@string/buttonNext"
-        android:textSize="20sp" />
+        style="@style/AppMaterialButtonNext"
+        android:text="@string/buttonNext" />
 
 </RelativeLayout>

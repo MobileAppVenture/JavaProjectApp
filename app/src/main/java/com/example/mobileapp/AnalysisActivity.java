@@ -108,7 +108,7 @@ public class AnalysisActivity extends AppCompatActivity {
         }
 
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.HOUR_OF_DAY, 3);  // добавляем 3 часа
+        calendar.add(Calendar.HOUR_OF_DAY, 3);
 
         String dateTime = new SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault()).format(calendar.getTime());
         historyList.add(0, new HistoryItem(result, dateTime));

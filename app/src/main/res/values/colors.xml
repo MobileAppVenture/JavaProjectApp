@@ -3,5 +3,7 @@
     <color name="black">#000</color>
     <color name="white">#fff</color>
     <color name="background">#b4c400</color>
-    <color name="textColor">#762ab0</color>
+    <color name="background_yellow">#F4D621</color>
+    <color name="purple">#762AB0</color>
+    <color name="light_yellow">#f7fa66</color>
 </resources>

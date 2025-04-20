@@ -2,29 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4D621">
-
-    <ImageView
-        android:id="@+id/fullScreenImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/descriptionImage"
-        android:gravity="center_horizontal"
-        android:scaleType="centerCrop" />
+    android:background="@color/background_yellow">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/angkor"
-        android:gravity="center"
-        android:text="@string/DefoltImage"
-        android:textColor="#762AB0"
-        android:textSize="40sp" />
+        style="@style/TitleText"
+        android:text="@string/DefoltImage" />
 
     <ImageView
         android:id="@+id/instruction2"
@@ -46,23 +29,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/returnButton"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/buttonReturn1"
-            android:textSize="20sp" />
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/buttonReturn1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/startButton"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/Start"
-            android:textSize="20sp" />
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/Start" />
     </LinearLayout>
 
 </RelativeLayout>

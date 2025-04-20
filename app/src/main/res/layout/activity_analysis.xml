@@ -2,20 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4D621">
+    android:background="@color/background_yellow">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/angkor"
-        android:gravity="center"
-        android:text="@string/ResultImage"
-        android:textColor="#762AB0"
-        android:textSize="40sp" />
+        style="@style/TitleText"
+        android:text="@string/ResultImage" />
 
     <ImageView
         android:id="@+id/instructionNew"
@@ -29,16 +21,12 @@
 
     <TextView
         android:id="@+id/resultText"
+        style="@style/TitleText"
         android:layout_width="325dp"
         android:layout_height="81dp"
         android:layout_below="@id/instructionNew"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="505dp"
-        android:fontFamily="@font/angkor"
-        android:gravity="center"
-        android:textColor="#762AB0"
-        android:textSize="26sp" />
+        android:layout_marginTop="525dp"
+        android:textSize="30sp" />
 
 
     <LinearLayout
@@ -52,23 +40,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/returnButton"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/buttonReturn"
-            android:textSize="20sp" />
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/buttonReturn" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nextButton4"
+            style="@style/AppMaterialButtonBar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/angkor"
-            android:text="@string/HistoryTitle"
-            android:textSize="20sp" />
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/HistoryTitle" />
     </LinearLayout>
 
 </RelativeLayout>
