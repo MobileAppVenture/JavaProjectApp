@@ -13,25 +13,17 @@
         android:text="@string/hello_user"
         android:textSize="35sp" />
 
-    <TextView
-        android:id="@+id/testInstruction1"
-        style="@style/InstructionText"
+    <ImageView
+        android:id="@+id/instructionImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/hiUser"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="0dp"
-        android:text="@string/TextInstruction1" />
-
-    <TextView
-        android:id="@+id/testInstruction2"
-        style="@style/InstructionText"
-        android:layout_below="@id/testInstruction1"
-        android:text="@string/TextInstruction2" />
-
-    <TextView
-        android:id="@+id/testInstruction3"
-        style="@style/InstructionText"
-        android:layout_below="@id/testInstruction2"
-        android:text="@string/TextInstruction3" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/border"
+        android:contentDescription="@string/TextInstruction"
+        android:padding="8dp"
+        android:src="@drawable/instruction" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"

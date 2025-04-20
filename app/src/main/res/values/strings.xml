@@ -6,9 +6,7 @@
     <string name="SelectInFiles">Open a gallery</string>
     <string name="UseCamera">Use the camera</string>
     <string name="ImageInstruction">Usage instructions</string>
-    <string name="TextInstruction1">Choose an image for recognition</string>
-    <string name="TextInstruction2">See the result</string>
-    <string name="TextInstruction3">Study your search history</string>
+    <string name="TextInstruction">Instruction</string>
     <string name="descriptionImage">Selected Image Full</string>
     <string name="DefoltImage">Image to process</string>
     <string name="buttonReturn">Return</string>
