@@ -42,11 +42,17 @@ public class NextActivity extends AppCompatActivity {
         ImageButton galleryButton = findViewById(R.id.gallery);
         ImageButton photoButton = findViewById(R.id.photo);
         Button nextButton = findViewById(R.id.nextButton2);
+        Button historyButton = findViewById(R.id.history);
 
         galleryButton.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, GALLERY_REQUEST_CODE);
+        });
+
+        historyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(NextActivity.this, HistoryActivity.class);
+            startActivity(intent);
         });
 
         photoButton.setOnClickListener(v -> {
